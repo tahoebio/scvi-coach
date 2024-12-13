@@ -22,6 +22,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 def main():
     # Create an ISO timestamp
     timestamp = datetime.now().isoformat()
+    print(f'Training model version {timestamp}')
 
     base_dir = f'/vevo/drive_3/ANALYSIS/analysis_157/Data/scvi_models/{timestamp}'
     print(f'Base directory: {base_dir}')
@@ -130,6 +131,8 @@ def main():
 
     # Save model and minified AnnData
     model.save(base_dir + '/model.minified', save_anndata = True, overwrite = True)
+
+    print(f'Model saved at {base_dir}/model.minified')
 
 
 if __name__ == "__main__":
