@@ -28,8 +28,9 @@ def main():
     print(f'Base directory: {base_dir}')
 
     # Load the data
-    pattern = '/atlas/p*/*.h5ad'
+    pattern = '/tahoe/p*/*.h5ad'
     files = glob(pattern)
+    files = [file for file in files if 'p14' not in file]
 
     adatas = []
     for fname in files:
