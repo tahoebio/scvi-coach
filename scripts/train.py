@@ -1,3 +1,4 @@
+# Copyright (C) Tahoe Therapeutics 2024-2025. All rights reserved.
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
@@ -28,9 +29,8 @@ def main():
     print(f'Base directory: {base_dir}')
 
     # Load the data
-    pattern = '/tahoe/p*/*.h5ad'
+    pattern = '/atlas/p*/*.h5ad'
     files = glob(pattern)
-    files = [file for file in files if 'p14' not in file]
 
     adatas = []
     for fname in files:

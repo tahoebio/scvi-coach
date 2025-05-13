@@ -1,3 +1,4 @@
+# Copyright (C) Tahoe Therapeutics 2024-2025. All rights reserved.
 import anndata
 from scipy import sparse
 
